@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AIZARA - Payment Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+    .image-box {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+</style>
+<body>
+    <section id="payment-info" class="pricing-area pt-115 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center pb-20 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <h5 class="sub-title">Payment Details</h5>
+                        <h3 class="title">Secure Bank Transfer <br> Use the Details Below</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="single-pricing text-center active mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.5s">
+                        <div class="image-box">
+                            <img src="card.png" alt="Credit Card">
+                        </div>
+                        <div class="pricing-text">
+                            <p class="text">Transfer funds directly to the following card:</p>
+                            <p class="text font-weight-bold" id="card-number">1234 5678 9012 3456</p>
+                            <p class="text">Cardholder Name: Jane Warren</p>
+                        </div>
+                        <div class="pricing-btn">
+                            <button onclick="copyCardNumber()" class="main-btn">Copy Card Number</button>
+                        </div>
+                        <p class="text mt-3">* Ensure you use your Order ID as the reference for the transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <script>
+        function copyCardNumber() {
+            const cardNumber = document.getElementById("card-number").innerText;
+            navigator.clipboard.writeText(cardNumber).then(() => {
+                alert("Card number copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+                // Fetch the Order ID from URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get("orderId");
+
+        if (orderId) {
+            document.getElementById("orderId").textContent = orderId;
+        } else {
+            document.getElementById("orderId").textContent = "Error: Order ID not found!";
+        }
+
+        document.querySelector(".main-btn").addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        // Gather product details
+        const color = document.querySelector('input[name="color"]:checked').id;
+        const size = document.querySelector('input[name="size"]:checked').id;
+        const quantity = document.getElementById("quantityInput").value;
+
+        // Send details to the backend
+        const response = await fetch("/create-order", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ color, size, quantity }),
+        });
+
+        const data = await response.json();
+
+        // Redirect to pay.html with the Order ID
+        window.location.href = `/pay.html?orderId=${data.orderId}`;
+    });
+    </script>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/ajax-contact.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
