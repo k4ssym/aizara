@@ -1,0 +1,142 @@
+
+
+
+/*===========================
+        08.BLOG css 
+===========================*/
+
+
+
+.single-blog{
+    & .blog-image{
+        & img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+        }
+    }
+    & .blog-content{
+        padding: 0 25px 25px;
+        margin-top: -18px;
+        position: relative;
+        border: 1px;
+        border: 2px solid rgba($border-color, 0.2);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top: 0;
+        
+        & .blog-meta{
+            & .author{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                padding: 2px;
+                background-color: $white;
+                overflow: hidden;
+                
+                & img{
+                    border-radius: 50%;
+                }
+            }
+            & .blog-list{
+                margin-top: 10px;
+                
+                & li{
+                    display: inline-block;
+                    margin-left: 50px;
+                    
+                    &:first-child{
+                        margin-left: 0;
+                    }                    
+                    
+                    & a{
+                        font-size: 14px;
+                        color: $body-color;
+                        @include transition(0.3s);
+                    
+                        &:hover{
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+        & .blog-text{
+            & .blog-title{
+                & a{
+                    font-size: 22px;
+                    color: $heading-color;
+                    font-weight: 600;
+                    margin-top: 25px;
+                    @include transition(0.3s);
+                    
+                    @media #{$xs}{
+                        font-size: 18px;
+                    }
+                    @media #{$sm}{
+                        font-size: 22px;
+                    }
+                    
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+            & .text{
+                margin-top: 20px;
+                
+            }
+            & .more {
+                font-size: 16px;
+                font-weight: 600;
+                color: $body-color;
+                margin-top: 20px;
+                @include transition(0.3s);
+
+                & .line-1 {
+                    width: 0px;
+                    height: 2px;
+                    background-color: $theme-color;
+                    @include transition(0.3s);
+                    margin-bottom: 5px;
+                }
+
+                & .line-2 {
+                    width: 20px;
+                    height: 2px;
+                    background-color: $border-color;
+                    margin-right: 10px;
+                    @include transition(0.3s);
+                    margin-left: 10px;
+                    margin-bottom: 5px;
+                }
+
+                &:hover {
+                    color: $theme-color;
+
+                    & .line-1 {
+                        width: 20px;
+                        margin-right: 10px;
+                    }
+                    & .line-2 {
+                        width: 0px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

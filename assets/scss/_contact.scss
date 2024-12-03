@@ -1,0 +1,112 @@
+
+
+
+/*===========================
+       09.CONTACT css 
+===========================*/
+
+.contact-area{
+    position: relative;
+}
+
+p{
+    &.form-message.success,
+    &.form-message.error {
+        font-size: 16px;
+        color: $heading-color;
+        background: $gray;
+        padding: 10px 15px;
+        margin-top: 30px;
+        margin-left: 15px;
+        
+        &.form-message.error{
+            color: #f00;
+        }
+    }
+}
+
+.contact-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    
+    @media #{$md}{
+        position: relative;
+        width: 720px;
+        right: 0;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 50px;
+    }
+    @media #{$xs}{
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 50px;
+    }
+    @media #{$sm}{
+        width: 540px;
+    }
+}
+
+.contact-content{
+    max-width: 540px;
+    
+    & .text{
+        margin-top: 35px;
+    }
+}
+
+
+.contact-form{
+    padding-right: 40px;
+    
+    @media #{$md}{
+        padding-right: 0;
+    }
+    @media #{$xs}{
+        padding-right: 0;
+    }
+    
+    & .single-form{
+        margin-top: 30px;
+        
+        & input,
+        & textarea{
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid rgba($border-color, 0.2);
+            color: $body-color;
+            padding: 0 25px;
+            
+            &:focus{
+                border-color: $theme-color;
+            }
+        }
+        
+        & textarea{
+            height: 170px;
+            padding-top: 15px;
+            resize: none;
+        }
+        
+        & .main-btn{
+            border-radius: 5px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

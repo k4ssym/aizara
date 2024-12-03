@@ -1,0 +1,319 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Core - HTML Business Website Template</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+        
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+        
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+   
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => preloader.style.display = 'none', 500);
+        }, 200);
+    </script>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/scss/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#services">Yay!</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li> -->
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            
+                            <div class="navbar-btn d-none d-sm-inline-block">
+                                <a class="main-btn" data-scroll-nav="0" href="#contact">Custom Design</a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div>
+                <section class="product-section">
+                    <div class="product-container">
+                        <div class="product">
+                            <div class="image-gallery">
+                                <div class="main-image">
+                                    <img src="assets/scss/1.jpg" id="mainProductImg" alt="Main Product Image">
+                                </div>
+                                <div class="thumbnail-gallery">
+                                    <img src="assets/scss/1.jpg" class="thumbnail active" alt="Product Image 1">
+                                    <img src="assets/scss/6.jpg" class="thumbnail" alt="Product Image 2">
+                                    <img src="assets/scss/9.jpg" class="thumbnail" alt="Product Image 3">
+                                    <img src="assets/scss/12.jpg" class="thumbnail" alt="Product Image 4">
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h2>Luxury Bamboo Jersey Hijab Hat</h2>
+                                <div class="price-discount">
+                                    <h3 class="price">$24.99</h3>
+                                </div>
+                                <p>Soft, breathable, and lightweight hijab made from premium bamboo jersey. Wrinkle-resistant and non-slip for all-day wear. Versatile size and timeless charcoal gray color suit any occasion. Eco-friendly packaging.</p>
+                                <div class="sizes">
+                                    <h3>Size:</h3>
+                                    <label>
+                                        <input type="radio" name="size" id="one-size" checked>
+                                        <span>One Size</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="colors">
+                                    <h3>Color:</h3>
+                                    <label>
+                                        <input type="radio" name="color" id="black" checked>
+                                        <span class="color" style="background-color: black;"></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="color" id="brown">
+                                        <span class="color" style="background-color: brown;"></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="color" id="white">
+                                        <span class="color" style="background-color: white; border: 1px solid #ccc;"></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="color" id="gray">
+                                        <span class="color" style="background-color: gray;"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="quantity">
+                                    <h3>Quantity:</h3>
+                                    <div class="quantity-box">
+                                        <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                                        <input type="number" class="quantity-input" id="quantityInput" value="1" min="1">
+                                        <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                                    </div>
+                                </div>
+                            
+                                <div class="navbar-btn d-none d-sm-inline-block">
+                                    <a class="main-btn" data-scroll-nav="0" href="#contact">Pay</a>
+                                </div>
+                            </div>
+                            
+                            <style>
+                                .color {
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    margin-right: 5px;
+                                }
+                            </style>
+                            
+                        </div>
+                        
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const mainImg = document.getElementById("mainProductImg");
+                            const thumbnails = document.querySelectorAll(".thumbnail");
+                
+                            thumbnails.forEach((thumb) => {
+                                thumb.addEventListener("click", () => {
+                                    mainImg.src = thumb.src;
+                                    thumbnails.forEach((t) => t.classList.remove("active"));
+                                    thumb.classList.add("active");
+                                });
+                            });
+                        });
+                        function updateQuantity(change) {
+        const quantityInput = document.getElementById('quantityInput');
+        let currentValue = parseInt(quantityInput.value);
+        currentValue = isNaN(currentValue) ? 1 : currentValue;
+        currentValue += change;
+        if (currentValue < 1) currentValue = 1;
+        quantityInput.value = currentValue;
+    }
+                    </script>
+                </section>
+            
+                <style>
+                    .quantity-box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                
+                    .quantity-btn {
+                        width: 40px;
+                        height: 40px;
+                        background: #fcbf49;
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 1.2rem;
+                        color: #fff;
+                        cursor: pointer;
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                        transition: background 0.3s ease, transform 0.2s ease;
+                    }
+                
+                    .quantity-btn:hover {
+                        background: #f77f00;
+                        transform: scale(1.1);
+                    }
+                
+                    .quantity-input {
+                        width: 60px;
+                        padding: 10px;
+                        text-align: center;
+                        border: 2px solid #fcbf49;
+                        border-radius: 10px;
+                        font-size: 1rem;
+                        transition: all 0.3s ease;
+                    }
+                
+                    .quantity-input:focus {
+                        border-color: #f77f00;
+                        box-shadow: 0 0 5px #fcbf49;
+                    }
+                </style>
+                
+                <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8e913cbcdb175fa8',t:'MTczMjcwMTI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center">
+            <div class="shape shape-1 animation1">
+                <img src="assets/images/shape-1.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-2 animation2">
+                <img src="assets/images/shape-2.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-3">
+                <img src="assets/images/shape-3.svg" alt="shape">
+            </div> <!-- shape -->
+            
+            <div class="shape shape-4 animation1">
+                <img src="assets/images/shape-1.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-5 animation2">
+                <img src="assets/images/shape-2.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-6">
+                <img src="assets/images/shape-3.svg" alt="shape">
+            </div> <!-- shape -->
+            
+            <div class="shape shape-7 animation1">
+                <img src="assets/images/shape-1.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-8 animation2">
+                <img src="assets/images/shape-2.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-9">
+                <img src="assets/images/shape-3.svg" alt="shape">
+            </div> <!-- shape -->
+        </div> <!-- header hero -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== BRAND PART START ======-->
+    
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/ajax-contact.js"></script>
+    
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8e913cbcdb175fa8',t:'MTczMjcwMTI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>

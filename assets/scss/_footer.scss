@@ -1,0 +1,222 @@
+
+
+
+/*===========================
+       10.FOOTER css 
+===========================*/
+
+.footer-area{
+    background-color: $gray;
+    position: relative;
+    z-index: 5;
+}
+
+.footer-shape-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.footer-shape-2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.footer-title{
+    & .title{
+        font-size: 22px;
+        font-weight: 600;
+        
+        @media #{$xs}{
+            font-size: 18px;
+        }
+    }
+}
+
+.footer-address{
+    & .logo{
+        margin-bottom: 30px;
+    }
+    & .text{
+        line-height: 35px;
+        @media #{$lg}{
+            font-size: 15px;
+        }
+    }
+}
+
+.footer-link{
+    padding-left: 80px;
+    
+    @media #{$lg}{
+        padding-left: 50px;
+    }
+    @media #{$md}{
+        padding-left: 80px;
+    }
+    @media #{$xs}{
+        padding-left: 38px;
+    }
+    @media #{$sm}{
+        padding-left: 80px;
+    }
+    
+    &:first-child{
+        padding-left: 0;
+    }
+    
+    & .link{
+        & li{
+            & a{
+                font-size: 16px;
+                color: $body-color;
+                line-height: 35px;
+                @include transition(0.3s);
+                
+                @media #{$lg}{
+                    font-size: 15px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+.subscribe-content{
+    max-width: 320px;
+    
+    & .text{
+        padding-top: 38px;
+    }
+}
+
+.subscribe-form{
+    position: relative;
+    
+    & input{
+        width: 100%;
+        height: 55px;
+        padding: 0 25px;
+        border-radius: 50px;
+        background-color: $white;
+        border: 1px solid transparent;
+        @include box-shadow (0px 5px 26px 0px rgba($border-color, 0.3));
+        
+        &:focus{
+            border-color: $theme-color;
+        }
+    }
+    & .main-btn{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 45px;
+        padding: 0 25px;
+        line-height: 45px;
+        @include box-shadow (none);
+        
+        @media #{$xs}{
+            position: relative;
+            margin-top: 10px;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+        @media #{$sm}{
+            position: absolute;
+            margin-top: 0;
+            right: 5px;
+            top: 5px;
+            width: auto;
+        }
+    }
+}
+
+
+
+.footer-copyright{
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-top: 1px solid rgba($border-color, 0.2);
+    
+    @media #{$xs}{
+        text-align: center;
+    }
+    
+    & .copyright-social{
+        margin-top: 15px;
+        
+        & span{
+            font-size: 18px;
+            color: $body-color;
+            padding-right: 10px;
+        }
+        & .social{
+            & li{
+                display: inline-block;
+                margin-left: 15px;
+                
+                & a{
+                    font-size: 18px;
+                    color: $heading-color;
+                    @include transition(0.3s);
+                    
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    & .copyright-text{
+        margin-top: 15px;
+        
+        & .text{
+            & a{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+
+
+/*===== BACK TO TOP =====*/
+
+.back-to-top{
+    font-size: 20px;
+    color: $white;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgba(254,132,100,1) 0%, rgba(254,110,154,1) 50%, rgba(254,132,100,1) 100%);
+    background-size: 200%;
+    text-align: center;
+    z-index: 99;
+    @include transition(0.3s);
+    display: none;
+    
+    &:hover{
+        background-position: right center;
+        color: $white;
+    }
+}
+
+
+
+
+
+
+
+
+

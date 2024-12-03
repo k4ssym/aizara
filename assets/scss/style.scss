@@ -1,0 +1,34 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Core - Business Website Template
+    Template URI: uideck.com
+    Author: UIdeck
+    Author URI: https://uideck.com/
+    Support: https://uideck.com/support/
+    Version: 1.0
+
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Theme default CSS
+	02. Header
+    03. Hero
+	04. Footer
+
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
+@import 'common';
+@import 'header';
+@import 'brand';
+@import 'about';
+@import 'services';
+@import 'pricing';
+@import 'testimonial';
+@import 'blog';
+@import 'contact';
+@import 'footer';
