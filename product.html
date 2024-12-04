@@ -136,14 +136,76 @@
                                 <!-- <div class="navbar-btn d-none d-sm-inline-block">
                                     <a class="main-btn" data-scroll-nav="0" href="pay.html">Pay</a>
                                 </div> -->
-                                <div class="navbar-btn-container">
-                                    <div class="navbar-btn">
-                                        <button class="main-btn pay-btn" onclick="handlePay()">Pay</button>
-                                    </div>
-                                    <div class="navbar-btn">
-                                        <button class="main-btn add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-                                    </div>
-                                </div>
+<!-- Кнопки Pay и Add to Cart -->
+<div class="action-buttons">
+    <button class="main-btn pay-btn" onclick="handlePay()">Pay</button>
+    <button class="main-btn add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+</div>
+
+<style>
+/* Контейнер для кнопок */
+.action-buttons {
+    display: flex;
+    flex-direction: row; /* Горизонтальная линия для кнопок */
+    justify-content: space-between; /* Равномерное пространство */
+    align-items: center;
+    margin-top: 20px; /* Отступ сверху */
+    gap: 15px; /* Пространство между кнопками */
+}
+
+/* Общий стиль для кнопок */
+.main-btn {
+    flex: 1; /* Равное распределение ширины */
+    display: flex; /* Используем Flexbox */
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Градиент кнопки "Pay" */
+.pay-btn {
+    background: linear-gradient(45deg, #FFA726, #e107b9); /* Оранжевый градиент */
+}
+
+.pay-btn:hover {
+    background: linear-gradient(45deg, #FF9800, #FF5722); /* Светлее при наведении */
+    transform: scale(1.05);
+}
+
+/* Градиент кнопки "Add to Cart" */
+.add-to-cart-btn {
+    background: linear-gradient(45deg, #00BCD4, #009688); /* Бирюзовый градиент */
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Зелёный градиент при наведении */
+    transform: scale(1.05);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column; /* Вертикальная линия на мобильных */
+        gap: 10px; /* Меньшее расстояние между кнопками */
+    }
+
+    .main-btn {
+        width: 100%; /* Кнопки занимают всю ширину */
+    }
+}
+</style>
+
+    
+
                                 
                                 <!-- Уведомление -->
                                 <div id="empty-cart-alert" class="alert hidden">
