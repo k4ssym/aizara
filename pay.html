@@ -57,10 +57,28 @@
                         <div class="image-box">
                             <img src="card.png" alt="Credit Card">
                         </div>
+                        <section id="payment-summary" class="pricing-area pt-50 pb-50">
+                            <div class="container">
+                                <h3 class="text-center">Order Summary</h3>
+                                <div class="order-total text-center">
+                                    <p><strong>Total Amount:</strong> $<span id="order-total">0.00</span></p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const totalAmount = localStorage.getItem("cartTotal");
+                            if (totalAmount) {
+                                document.getElementById("order-total").textContent = totalAmount;
+                            }
+                        });
+                        </script>
+                        
                         <div class="pricing-text">
                             <p class="text">Transfer funds directly to the following card:</p>
-                            <p class="text font-weight-bold" id="card-number">1234 5678 9012 3456</p>
-                            <p class="text">Cardholder Name: Jane Warren</p>
+                            <p class="text font-weight-bold" id="card-number">4815 8203 3998 6331</p>
+                            <p class="text">Cardholder Name: MOLDIR BALTABAYEVA</p>
                         </div>
                         <div class="pricing-btn">
                             <button onclick="copyCardNumber()" class="main-btn">Copy Card Number</button>

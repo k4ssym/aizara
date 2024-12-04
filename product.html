@@ -1,0 +1,634 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AIZARA</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== HEADER PART START ======-->
+
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/scss/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#services">Shop</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="navbar-btn d-none d-sm-inline-block">
+                                <button class="main-btn cart-btn" onclick="toggleCart()">
+                                    <img src="cart.svg" alt="Cart" style="width: 24px; height: 24px;"> 
+                                    <span id="cart-count">(0)</span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+                <section class="product-section">
+                    <div class="product-container">
+                        <div class="product">
+                            <div class="image-gallery">
+                                <div class="main-image">
+                                    <img src="assets/scss/1.jpg" id="mainProductImg" alt="Main Product Image">
+                                </div>
+                                <div class="thumbnail-gallery">
+                                    <img src="assets/scss/1.jpg" class="thumbnail active" alt="Product Image 1">
+                                    <img src="assets/scss/6.jpg" class="thumbnail" alt="Product Image 2">
+                                    <img src="assets/scss/9.jpg" class="thumbnail" alt="Product Image 3">
+                                    <img src="assets/scss/12.jpg" class="thumbnail" alt="Product Image 4">
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h2>Luxury Bamboo Jersey Hijab Hat</h2>
+                                <div class="price-discount">
+                                    <h3 class="price">$24.99</h3>
+                                </div>
+                                <p>Soft, breathable, and lightweight hijab made from premium bamboo jersey. Wrinkle-resistant and non-slip for all-day wear. Versatile size and timeless charcoal gray color suit any occasion. Eco-friendly packaging.</p>
+                                <div class="sizes">
+                                    <h3>Size:</h3>
+                                    <label>
+                                        <input type="radio" name="size" id="one-size" checked>
+                                        <span>One Size</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="colors">
+                                    <h3>Color:</h3>
+                                    <label>
+                                        <input type="radio" name="color" value="Black" checked>
+                                        <span class="color" style="background-color: black;"></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="color" value="Brown">
+                                        <span class="color" style="background-color: brown;"></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="color" value="White">
+                                        <span class="color" style="background-color: white; border: 1px solid #ccc;"></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="color" value="Gray">
+                                        <span class="color" style="background-color: gray;"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="quantity">
+                                    <h3>Quantity:</h3>
+                                    <div class="quantity-box">
+                                        <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                                        <input type="number" class="quantity-input" id="quantityInput" value="1" min="1">
+                                        <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                                    </div>
+                                </div>
+                            
+                                <!-- <div class="navbar-btn d-none d-sm-inline-block">
+                                    <a class="main-btn" data-scroll-nav="0" href="pay.html">Pay</a>
+                                </div> -->
+                                <div class="navbar-btn-container">
+                                    <div class="navbar-btn">
+                                        <button class="main-btn pay-btn" onclick="handlePay()">Pay</button>
+                                    </div>
+                                    <div class="navbar-btn">
+                                        <button class="main-btn add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Уведомление -->
+                                <div id="empty-cart-alert" class="alert hidden">
+                                    <p>Your cart is empty. Please add products to proceed!</p>
+                                </div>
+                                
+                                <style>
+                                /* Стиль для уведомления */
+                                .alert {
+                                    position: fixed;
+                                    top: 20%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    padding: 20px 30px;
+                                    background: #ffcccc;
+                                    color: #ff0000;
+                                    font-family: 'Poppins', sans-serif;
+                                    font-size: 16px;
+                                    border-radius: 10px;
+                                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                                    z-index: 1000;
+                                    text-align: center;
+                                    transition: opacity 0.3s ease, visibility 0.3s ease;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+                                
+                                .alert.show {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                                
+                                .alert p {
+                                    margin: 0;
+                                    font-weight: bold;
+                                }
+                                </style>
+                                
+                                
+                                <style>
+                                /* Контейнер для параллельного расположения кнопок */
+                                .navbar-btn-container {
+                                    display: flex;
+                                    gap: 15px;
+                                    align-items: center;
+                                    justify-content: flex-start; /* Или center, если нужно выровнять по центру */
+                                }
+                                
+                                /* Градиентный стиль для кнопки Pay */
+                                .pay-btn {
+                                    background: linear-gradient(45deg, #FFA726 , #5D4037 );
+                                    border: none;
+                                    color: white;
+                                    font-weight: bold;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    border-radius: 5px;
+                                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                    transition: all 0.3s ease;
+                                }
+                                
+                                .pay-btn:hover {
+                                    background: linear-gradient(45deg, #00AA00, #00AA00);
+                                    transform: scale(1.05);
+                                }
+                                
+                                /* Стили для кнопки Add to Cart (оставлены как есть) */
+                                .add-to-cart-btn {
+                                    padding: 10px 20px;
+                                    border: none;
+                                    background-color: #fcbf49;
+                                    color: white;
+                                    border-radius: 5px;
+                                    font-weight: bold;
+                                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                    transition: all 0.3s ease;
+                                }
+                                
+                                .add-to-cart-btn:hover {
+                                    background-color: #f77f00;
+                                    transform: scale(1.05);
+                                }
+                                </style>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+<!-- Cart Popup -->
+<div id="cart-popup" class="cart-popup hidden">
+    <div class="cart-popup-header">
+        <h2>Your Cart</h2>
+        <button class="close-btn" onclick="toggleCart()">✖</button>
+    </div>
+    <ul id="cart-items"></ul>
+    <div class="cart-total">
+        <strong>Total: $<span id="cart-total">0.00</span></strong>
+    </div>
+    <!-- <a href="pay.html" class="main-btn">Checkout</a> -->
+</div>
+
+</div>
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center">
+            <div class="shape shape-1 animation1">
+                <img src="assets/images/shape-1.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-2 animation2">
+                <img src="assets/images/shape-2.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-3">
+                <img src="assets/images/shape-3.svg" alt="shape">
+            </div> <!-- shape -->
+            
+            <div class="shape shape-4 animation1">
+                <img src="assets/images/shape-1.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-5 animation2">
+                <img src="assets/images/shape-2.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-6">
+                <img src="assets/images/shape-3.svg" alt="shape">
+            </div> <!-- shape -->
+            
+            <div class="shape shape-7 animation1">
+                <img src="assets/images/shape-1.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-8 animation2">
+                <img src="assets/images/shape-2.svg" alt="shape">
+            </div> <!-- shape -->
+            <div class="shape shape-9">
+                <img src="assets/images/shape-3.svg" alt="shape">
+            </div> <!-- shape -->
+        </div> <!-- header hero -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+    <!--====== BRAND PART START ======-->
+    <style>
+.cart-popup {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 320px;
+    max-height: 450px;
+    background: #fff;
+    border: 2px solid #fcbf49;
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 0.3s ease-in-out; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-popup.hidden {
+    display: none;
+}
+
+.cart-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Приятный современный шрифт */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #f77f00; /* Цвет при наведении */
+}
+
+/* Стили списка товаров */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items li button {
+    background: #ff5252;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#cart-items li button:hover {
+    background: #e53935; /* Цвет при наведении */
+}
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+#cart-items li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль миниатюры */
+#cart-items li img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Информация о товаре */
+#cart-items li .item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#cart-items li .remove-btn {
+    align-self: flex-end;
+    background: #ff5252;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#cart-items li .remove-btn:hover {
+    background: #e53935;
+}
+/* Кнопка очистки корзины */
+.clear-btn {
+    background: linear-gradient(45deg, #ff9800, #f57c00);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: linear-gradient(45deg, #fb8c00, #ef6c00);
+    transform: scale(1.05);
+}
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+        .quantity-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            background: #fcbf49;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+    
+        .quantity-btn:hover {
+            background: #f77f00;
+            transform: scale(1.1);
+        }
+    
+        .quantity-input {
+            width: 60px;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #fcbf49;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+    
+        .quantity-input:focus {
+            border-color: #f77f00;
+            box-shadow: 0 0 5px #fcbf49;
+        }
+
+        .color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+    </style>
+
+    <script>
+function handlePay() {
+    if (cart.length === 0) {
+        showEmptyCartAlert();
+    } else {
+        // Если корзина не пуста, переходим на страницу оплаты
+        window.location.href = "pay.html";
+    }
+}
+
+function showEmptyCartAlert() {
+    const alert = document.getElementById("empty-cart-alert");
+    alert.classList.add("show");
+    setTimeout(() => {
+        alert.classList.remove("show");
+    }, 1200); // Скрыть через 3 секунды
+}
+
+
+
+let cart = [];
+
+function addToCart() {
+    const size = document.querySelector('input[name="size"]:checked').value;
+    const color = document.querySelector('input[name="color"]:checked').value;
+    const quantity = parseInt(document.getElementById("quantityInput").value, 10);
+    const price = parseFloat(document.querySelector(".price").textContent.replace("$", ""));
+
+    cart.push({ size, color, quantity, price });
+    updateCartUI();
+}
+
+function updateCartUI() {
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    let totalAmount = 0;
+
+    cartItems.innerHTML = "";
+    cart.forEach((item, index) => {
+        const itemTotalPrice = item.price * item.quantity;
+        totalAmount += itemTotalPrice;
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <img src="assets/scss/1.jpg" alt="Product Image">
+            <div class="item-info">
+                <div><strong>Size:</strong> ${item.size}</div>
+                <div><strong>Color:</strong> ${item.color}</div>
+                <div><strong>Quantity:</strong> ${item.quantity}</div>
+                <div><strong>Price:</strong> $${itemTotalPrice.toFixed(2)}</div>
+            </div>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>`;
+        cartItems.appendChild(li);
+    });
+
+    // Обновляем общую сумму
+    cartTotal.textContent = totalAmount.toFixed(2);
+
+    // Сохраняем сумму в localStorage для использования на странице оплаты
+    localStorage.setItem("cartTotal", totalAmount.toFixed(2));
+    document.getElementById("cart-count").textContent = `(${cart.length})`;
+}
+
+function clearCart() {
+    cart = [];
+    updateCartUI();
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+}
+
+function toggleCart() {
+    const cartPopup = document.getElementById("cart-popup");
+    cartPopup.classList.toggle("hidden");
+}
+
+
+                                document.addEventListener("DOMContentLoaded", () => {
+                            const mainImg = document.getElementById("mainProductImg");
+                            const thumbnails = document.querySelectorAll(".thumbnail");
+                
+                            thumbnails.forEach((thumb) => {
+                                thumb.addEventListener("click", () => {
+                                    mainImg.src = thumb.src;
+                                    thumbnails.forEach((t) => t.classList.remove("active"));
+                                    thumb.classList.add("active");
+                                });
+                            });
+                        });
+                        function updateQuantity(change) {
+        const quantityInput = document.getElementById('quantityInput');
+        let currentValue = parseInt(quantityInput.value);
+        currentValue = isNaN(currentValue) ? 1 : currentValue;
+        currentValue += change;
+        if (currentValue < 1) currentValue = 1;
+        quantityInput.value = currentValue;
+    }
+
+
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => preloader.style.display = 'none', 500);
+        }, 200);
+        
+    </script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8e913cbcdb175fa8',t:'MTczMjcwMTI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/ajax-contact.js"></script>
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8e913cbcdb175fa8',t:'MTczMjcwMTI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>
